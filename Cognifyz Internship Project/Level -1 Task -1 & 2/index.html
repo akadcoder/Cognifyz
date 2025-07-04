@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Internship Project - Level 1 Task -1 & Task -2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            color: #f0f0f0;
+            font-size: 1.2em;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .card h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .card p {
+            color: #f0f0f0;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Interactive Buttons */
+        .color-button {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .color-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .time-button {
+            background: linear-gradient(45deg, #a8edea, #fed6e3);
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .time-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Form Styles */
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: white;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1em;
+            backdrop-filter: blur(5px);
+        }
+
+        input[type="text"]::placeholder, input[type="number"]::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Calculator Styles */
+        .calculator {
+            text-align: center;
+        }
+
+        .calc-input {
+            display: inline-block;
+            width: 80px;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        .calc-result {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            color: white;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        /* Image Styles */
+        .hero-image {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>🚀 My Internship Project</h1>
+            <p class="subtitle">Level 1 - Complete Web Development Tasks</p>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#home">🏠 Home</a></li>
+                <li><a href="#projects">💼 Projects</a></li>
+                <li><a href="#contact">📞 Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="content-grid">
+            <!-- About Section with Image -->
+            <div class="card">
+                <h2>📋 About This Project</h2>
+                <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=400&h=200&fit=crop" 
+                     alt="Web Development" class="hero-image">
+                <p>This webpage demonstrates HTML, CSS, and JavaScript skills through interactive elements, beautiful design, and functional components.</p>
+            </div>
+
+            <!-- Interactive Buttons Section -->
+            <div class="card">
+                <h2>🎨 Interactive Elements</h2>
+                <p>Click the buttons below to see JavaScript in action!</p>
+                <button class="color-button" onclick="changeColor(this)">Change My Color!</button>
+                <button class="time-button" onclick="showTimeGreeting()">Show Time Greeting</button>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-container">
+            <h2 style="color: white; margin-bottom: 20px;">📝 Contact Form</h2>
+            <form onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit Form</button>
+            </form>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="form-container calculator">
+            <h2 style="color: white; margin-bottom: 20px;">🧮 Simple Calculator</h2>
+            <div>
+                <input type="number" id="num1" class="calc-input" placeholder="First number">
+                <span style="color: white; font-size: 1.5em;">+</span>
+                <input type="number" id="num2" class="calc-input" placeholder="Second number">
+                <button class="color-button" onclick="calculateSum()">Calculate</button>
+            </div>
+            <div id="result" class="calc-result" style="display: none;">
+                Result will appear here
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Color changing functionality
+        const colors = [
+            'linear-gradient(45deg, #ff6b6b, #4ecdc4)',
+            'linear-gradient(45deg, #a8edea, #fed6e3)',
+            'linear-gradient(45deg, #ffecd2, #fcb69f)',
+            'linear-gradient(45deg, #667eea, #764ba2)',
+            'linear-gradient(45deg, #f093fb, #f5576c)',
+            'linear-gradient(45deg, #4facfe, #00f2fe)'
+        ];
+
+        function changeColor(button) {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            button.style.background = randomColor;
+            button.style.transform = 'scale(1.1)';
+            
+            setTimeout(() => {
+                button.style.transform = 'scale(1)';
+            }, 200);
+        }
+
+        // Time-based greeting functionality
+        function showTimeGreeting() {
+            const now = new Date();
+            const hours = now.getHours();
+            const timeString = now.toLocaleTimeString();
+            
+            let greeting;
+            if (hours < 12) {
+                greeting = "Good Morning! 🌅";
+            } else if (hours < 17) {
+                greeting = "Good Afternoon! ☀️";
+            } else {
+                greeting = "Good Evening! 🌙";
+            }
+            
+            alert(`${greeting}\nCurrent time: ${timeString}`);
+        }
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`Thank you ${name}! Your form has been submitted successfully! 🎉`);
+            document.getElementById('name').value = '';
+        }
+
+        // Calculator functionality
+        function calculateSum() {
+            const num1 = parseFloat(document.getElementById('num1').value) || 0;
+            const num2 = parseFloat(document.getElementById('num2').value) || 0;
+            const sum = num1 + num2;
+            
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <div style="font-size: 1.1em;">
+                    ${num1} + ${num2} = <span style="color: #4ecdc4; font-size: 1.3em;">${sum}</span>
+                </div>
+            `;
+            
+            // Add animation effect
+            resultDiv.style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                resultDiv.style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        // Add some interactive effects on page load
+        window.addEventListener('load', function() {
+            // Animate cards on load
+            const cards = document.querySelectorAll('.card, .form-container');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
