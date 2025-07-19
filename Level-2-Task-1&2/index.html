@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 2 Tasks - Simple & Clean</title>
+    <!-- Bulma CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Simple Navigation with Hamburger Menu -->
+    <nav class="navbar is-light" role="navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#home">
+                    <strong>Level 2 Tasks</strong>
+                </a>
+                
+                <!-- Hamburger Menu -->
+                <a role="button" class="navbar-burger" id="navbar-burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="#cards">Cards</a>
+                    <a class="navbar-item" href="#grid">Grid</a>
+                    <a class="navbar-item" href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Simple Hero -->
+    <section class="hero is-primary is-medium" id="home">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-2">Level 2 Tasks</h1>
+                <h2 class="subtitle">Front-end Framework & Responsive Design</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Task 1: Card Components with Bulma -->
+    <section class="section" id="cards">
+        <div class="container">
+            <h2 class="title has-text-centered">Task 1: Responsive Card Components</h2>
+            <p class="subtitle has-text-centered">Using Bulma Framework</p>
+            
+            <!-- Simple Cards Grid -->
+            <div class="columns is-multiline">
+                <div class="column is-4-desktop is-6-tablet is-12-mobile">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Desktop">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-5">Desktop Layout</p>
+                            <p>Three-column responsive design for desktop viewing with proper spacing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-4-desktop is-6-tablet is-12-mobile">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tablet">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-5">Tablet Layout</p>
+                            <p>Two-column adaptive design maintaining readability on tablets.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-4-desktop is-6-tablet is-12-mobile">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mobile">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-5">Mobile Layout</p>
+                            <p>Single-column mobile-first approach for optimal performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Task 2: Responsive Grid Layout -->
+    <section class="section has-background-light" id="grid">
+        <div class="container">
+            <h2 class="title has-text-centered">Task 2: Responsive Grid Layout</h2>
+            <p class="subtitle has-text-centered">CSS Grid with Media Queries</p>
+            
+            <!-- Simple Grid -->
+            <div class="responsive-grid">
+                <div class="grid-item">
+                    <div class="has-text-centered">
+                        <i class="fas fa-desktop fa-2x has-text-primary"></i>
+                        <h3 class="title is-5">Desktop</h3>
+                        <p>Three-column grid layout</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <div class="has-text-centered">
+                        <i class="fas fa-tablet-alt fa-2x has-text-primary"></i>
+                        <h3 class="title is-5">Tablet</h3>
+                        <p>Two-column adaptive design</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <div class="has-text-centered">
+                        <i class="fas fa-mobile-alt fa-2x has-text-primary"></i>
+                        <h3 class="title is-5">Mobile</h3>
+                        <p>Single-column layout</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <div class="has-text-centered">
+                        <i class="fas fa-code fa-2x has-text-primary"></i>
+                        <h3 class="title is-5">Clean Code</h3>
+                        <p>Media queries implementation</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <div class="has-text-centered">
+                        <i class="fas fa-bolt fa-2x has-text-primary"></i>
+                        <h3 class="title is-5">Fast</h3>
+                        <p>Optimized performance</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <div class="has-text-centered">
+                        <i class="fas fa-check fa-2x has-text-primary"></i>
+                        <h3 class="title is-5">Compatible</h3>
+                        <p>Cross-browser support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Contact Form -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="title has-text-centered">Contact Form</h2>
+            <div class="columns is-centered">
+                <div class="column is-6">
+                    <form>
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Your name">
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control">
+                                <input class="input" type="email" placeholder="Your email">
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Your message"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-primary is-fullwidth">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p><strong>Level 2 Tasks</strong> - Built with Bulma Framework and CSS Media Queries</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
